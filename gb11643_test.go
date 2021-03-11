@@ -1,30 +1,12 @@
-// Copyright 2014 by caixw, All rights reserved.
-// Use of this source code is governed by a MIT
-// license that can be found in the LICENSE file.
+// SPDX-License-Identifier: MIT
 
 package is
 
 import (
-	"math"
 	"testing"
 
 	"github.com/issue9/assert"
 )
-
-// 计算各个数值位对应的系数值。
-func getWeight() []int {
-	l := 17
-	ret := make([]int, 17, 17)
-	for i := 0; i < l; i++ {
-		k := int(math.Pow(2, float64((l - i)))) // k值足够大，不能用byte保存
-		ret[i] = k % 11
-	}
-	return ret
-}
-
-func TestGetWeight(t *testing.T) {
-	assert.Equal(t, gb11643Weight, getWeight())
-}
 
 func TestGB11643(t *testing.T) {
 	a := assert.New(t)

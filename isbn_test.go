@@ -1,6 +1,4 @@
-// Copyright 2014 by caixw, All rights reserved.
-// Use of this source code is governed by a MIT
-// license that can be found in the LICENSE file.
+// SPDX-License-Identifier: MIT
 
 package is
 
@@ -9,15 +7,6 @@ import (
 
 	"github.com/issue9/assert"
 )
-
-func TestEraseMinus(t *testing.T) {
-	a := assert.New(t)
-
-	a.Equal(eraseMinus([]byte("abc-def-abc-")), []byte("abcdefabc"))
-	a.Equal(eraseMinus([]byte("abc-def-abc")), []byte("abcdefabc"))
-	a.Equal(eraseMinus([]byte("-_abc-def-abc-")), []byte("_abcdefabc"))
-	a.Equal(eraseMinus([]byte("-abc-d_ef-abc-")), []byte("abcd_efabc"))
-}
 
 func TestISBN(t *testing.T) {
 	a := assert.New(t)

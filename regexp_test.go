@@ -1,6 +1,4 @@
-// Copyright 2014 by caixw, All rights reserved.
-// Use of this source code is governed by a MIT
-// license that can be found in the LICENSE file.
+// SPDX-License-Identifier: MIT
 
 package is
 
@@ -38,7 +36,7 @@ func TestCNMobile(t *testing.T) {
 	a.False(CNMobile("+8650111111112"))  // 开头少1
 	a.False(CNMobile("8650111111112"))   // 开头少1
 	a.False(CNMobile("154111111112"))    // 不存在的前缀154
-	a.False(CNMobile("+8619711111111"))
+	a.True(CNMobile("15411111111"))
 }
 
 func TestCNTel(t *testing.T) {
